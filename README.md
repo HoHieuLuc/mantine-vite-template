@@ -1,0 +1,2 @@
+# Mantine Vite Template
+wip
