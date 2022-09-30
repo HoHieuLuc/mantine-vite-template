@@ -13,12 +13,6 @@ module.exports = {
         'testing-library',
         'jest',
     ],
-    overrides: [
-        {
-            files: ['**/?(*.)+(spec|test).[jt]s?(x)'],
-            extends: ['plugin:testing-library/react'],
-        },
-    ],
     env: {
         browser: true,
         es6: true,
@@ -41,12 +35,15 @@ module.exports = {
         'vite.config.ts',
         'jest.*.ts',
     ],
-    overrides: [{
-        files: ['src/**/*.[test|spec].[t|j]sx'],
-        rules: {
-            '@typescript-eslint/no-unsafe-call': 'off',
-        }
-    }],
+    overrides: [
+        {
+            files: ['**/?(*.)+(spec|test).[jt]s?(x)'],
+            extends: ['plugin:testing-library/react'],
+            rules: {
+                '@typescript-eslint/no-unsafe-call': 'off',
+            },
+        },
+    ],
     rules: {
         '@typescript-eslint/semi': [
             'error'
