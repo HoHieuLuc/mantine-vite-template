@@ -35,7 +35,8 @@
         "useUnknownInCatchVariables": false
     },
     "include": [
-        "src"
+        "src",
+        "scripts",
     ],
     "references": [
         {
