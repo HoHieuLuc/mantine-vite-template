@@ -1,45 +1,43 @@
 {
-    "compilerOptions": {
-        "target": "ESNext",
-        "useDefineForClassFields": true,
-        "lib": [
-            "DOM",
-            "DOM.Iterable",
-            "ESNext"
-        ],
-        "baseUrl": "./src",
-        "paths": {
-            "@/*": [
-                "./*"
-            ]
-        },
-        "types": [
-            "node",
-            "jest",
-            "@testing-library/jest-dom"
-        ],
-        "skipLibCheck": true,
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
-        "strict": true,
-        "forceConsistentCasingInFileNames": true,
-        "module": "esnext",
-        "moduleResolution": "node",
-        "resolveJsonModule": true,
-        "isolatedModules": true,
-        "noEmit": true,
-        "jsx": "react-jsx",
-        "downlevelIteration": true,
-        "allowJs": true,
-        "noFallthroughCasesInSwitch": true,
-        "useUnknownInCatchVariables": false
-    },
-    "include": [
-        "src"
+  "compilerOptions": {
+    "types": [
+      "node",
+      "@testing-library/jest-dom",
+      "vitest/globals"
     ],
-    "references": [
-        {
-            "path": "./tsconfig.node.json"
-        }
-    ]
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "downlevelIteration": true,
+    "allowJs": true,
+    "noFallthroughCasesInSwitch": true,
+    "useUnknownInCatchVariables": false,
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@test-utils": [
+        "./test-utils"
+      ]
+    }
+  },
+  "include": [
+    "src",
+    "test-utils"
+  ]
 }

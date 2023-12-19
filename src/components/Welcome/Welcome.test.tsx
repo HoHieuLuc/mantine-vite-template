@@ -1,9 +1,12 @@
-import { render, screen } from '@testing-library/react';
-import Welcome from './Welcome';
+import { render, screen } from '@test-utils';
+import { Welcome } from './Welcome';
 
 describe('Welcome component', () => {
-    it('has "Welcome to Mantine" in the title', () => {
-        render(<Welcome />);
-        expect(screen.getByLabelText('title')).toHaveTextContent('Welcome to Mantine');
-    });
+  it('has correct Vite guide link', () => {
+    render(<Welcome />);
+    expect(screen.getByText('this guide')).toHaveAttribute(
+      'href',
+      'https://mantine.dev/guides/vite/',
+    );
+  });
 });
